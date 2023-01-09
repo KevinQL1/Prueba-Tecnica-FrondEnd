@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+Table{
+  background-color: #B3DEF3;
+}
+
+#NavBar{
+  background-color: #B3DEF3;
+}
