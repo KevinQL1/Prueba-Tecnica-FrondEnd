@@ -12,10 +12,25 @@ code {
     monospace;
 }
 
-Table{
-  background-color: #B3DEF3;
+h1{
+  margin: auto;
+  font-size: 1.3rem;
+  text-align: center;
 }
 
-#NavBar{
-  background-color: #B3DEF3;
+#NavBar, #btn{
+  color: black;
+  width: 100%;
+  background-color: #B3DEF3;  
+}
+
+#containerNavBar, #containerTable, #containerForm{
+  border: .1rem solid;
+}
+
+#containerWelcome{
+  border: .1rem solid;
+  width: 75%;
+  margin: auto;
+  justify-content: center;
 }

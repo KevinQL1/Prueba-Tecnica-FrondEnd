@@ -1,29 +1,26 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Employee from "./Components/EmployeeService/Employee";
+import SaveEmployee from "./Components/EmployeeService/SaveEmployee";
 import NavBar from "./Components/NavBar";
-import Employee from "./Components/Employee/Employee";
-import Solicitude from "./Components/Solicitude/Solicitude";
-import SaveEmployee from "./Components/Employee/SaveEmployee";
-import SaveSolicitude from "./Components/Solicitude/SaveSolicitude";
+import FindSolicitude from "./Components/SolicitudeService/FindSolicitude";
+import SaveSolicitude from "./Components/SolicitudeService/SaveSolicitude";
+import Solicitude from "./Components/SolicitudeService/Solicitude";
+import Welcome from "./Components/Welcome";
 
-function App() {
+const App = () => {
   return (
-    <div>
-      <div className="my-5">
-        <NavBar></NavBar>
-      </div>
-      <div className="my-5">
-        <Employee></Employee>
-      </div>
-      <div className="my-5">
-        <Solicitude></Solicitude>
-      </div>
-      <div className="my-5">
-        <SaveEmployee></SaveEmployee>
-      </div>
-      <div className="my-5">
-        <SaveSolicitude></SaveSolicitude>
-      </div>
-    </div>
+    <BrowserRouter>
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<Welcome/>}/>
+        <Route path="/employee/all" element={<Employee/>} />
+        <Route path="/employee/:idSolicitude" element={<Employee/>}/>
+        <Route path="/employee/save" element={<SaveEmployee/>} />
+        <Route path="/solicitude/all" element={<Solicitude/>} />
+        <Route path="/solicitude/:idSolicitude" element={<FindSolicitude/>}/>
+        <Route path="/solicitude/save" element={<SaveSolicitude/>} />
+      </Routes>
+    </BrowserRouter>
   );
-}
-
+};
 export default App;
